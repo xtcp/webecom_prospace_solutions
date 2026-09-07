@@ -1,0 +1,22 @@
+/// Fichier SCSS pour les styles de texte
+
+@use '../utils/variables' as *;
+@use 'sass:map';
+
+.text-blue {
+    color: $secondary-color;
+}
+.text-info {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: $info-text-secondary;
+}
+.text-link {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+
+    &:hover {
+        color: $secondary-color;
+        cursor: pointer;
+    }
+}

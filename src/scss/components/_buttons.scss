@@ -1,0 +1,12 @@
+/// "Placeholder" pour les boutons
+
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+.btn {
+    &-primary {
+        &:hover {
+        }
+    }
+}

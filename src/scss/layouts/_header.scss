@@ -1,0 +1,88 @@
+/// Fichier SCSS pour les styles du header
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+@use 'sass:color';
+@use 'sass:map';
+
+header {
+    color: $primary-color;
+    background-color: $secondary-background-color;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 20px 25px -5px $hover-shadow-light, 0 8px 10px -6px $hover-shadow-light;
+}
+.header-inner {
+    @include flex-space-between;
+    max-width: 80rem;
+    height: 4rem;
+    margin: auto;
+    padding: 0 1rem;
+    @media (min-width: 640px) {
+        padding: 0 1.5rem;
+    }
+}
+
+.logo {
+    @include flex-center;
+    gap: 0.625rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    letter-spacing: -0.025em;
+    mix-blend-mode: screen;
+    &__text {
+        color: $primary-color;
+    }
+    &-icon {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 0.75rem;
+        background-color: $text-extra;
+        @include flex-center;
+        box-shadow:
+            0 4px 6px -1px color.change($text-extra, $alpha: 0.3),
+            0 2px 4px -2px color.change($text-extra, $alpha: 0.3);
+    }
+}
+.header-nav {
+    ul {
+        @include flex-center;
+        gap: 0.125rem;
+    }
+    &-space_quant {
+        @include flex-center;
+        border-radius: 50%;
+        width: 1.25rem;
+        height: 1.25rem;
+        background-color: #0284C7;
+        color: white;
+        font-size: map.get($font-size, 'extra-small');
+        line-height: 1rem;
+        font-variant-numeric: tabular-nums;
+    }
+}
+.header-nav-link {
+    padding: 0.5rem 0.875rem;
+    border-radius: calc($primary-radius - 2px);
+    font-size: map.get($font-size, 'small');
+    line-height: 1.25rem;
+    font-weight: 500;
+    transition-property: all;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    mix-blend-mode: screen;
+    color: $tertiary-color;
+
+    &:hover {
+        background-color: $hover-shadow;
+        color: $primary-color;
+    }
+    &-active {
+        color: $secondary-color;
+        background-color: $hover-shadow;
+    }
+}

@@ -1,0 +1,25 @@
+/// A SCSS Test using SASS
+///
+/// main SCSS File
+/// 
+/// No options
+
+@use 'sass:math';
+@use 'sass:map';
+@use 'sass:selector';
+
+@use 'utils/variables' as *;
+
+@use 'base/normalize' as *;
+
+
+@use 'components/buttons' as *;
+@use 'components/text' as *;
+@use 'utils/mixins' as *;
+
+@use 'layouts/header' as *;
+@use 'layouts/footer' as *;
+@use 'layouts/page' as *;
+
+@use 'pages/home' as *;
+

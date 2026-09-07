@@ -1,0 +1,64 @@
+/// 
+/// Fichier scss pour les resets de page et le stylisations de base
+/// 
+
+
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+
+html {
+    font-size: map.get($font-size, 'root');
+}
+body {
+    background-color: $secondary-background-color;
+    color: $primary-color;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    min-height: 100vh;
+
+    font-family: $primary-font, sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings: normal;
+    font-weight: 400;
+    font-style: normal;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-size-adjust: none;
+}
+img {
+    display: block;
+    width: 100%;
+}
+a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+p {
+    line-height: 1.688rem;
+}
+h1, h2 {
+    font-weight: inherit;
+}
+h1 {
+    font-size: map.get($font-size, 'extra-large'); 
+}
+h2 {
+    font-size: map.get($font-size, 'standard');
+}

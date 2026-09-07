@@ -1,0 +1,131 @@
+Analyse Énoncé:
+
+
+Demandes client:
+
+  - Portail performant (optimisation de temps de chargement des pages, etc...)
+  - Intuitif (Gestion des actions/js de façon intuitif)
+  - 100% responsive (CSS en responsive)
+  - parfaitement optimisée pour le SEO B2B (référencement naturel)
+  - respectant les normes d'accessibilité numérique (WCAG 2.1 AA)
+  
+Pages:
+
+	1.  Accueil & Recherche ( index.html )
+		◦ Moteur de recherche multi-critères (ville, capacité, équipements).
+		◦ Affichage des résultats sous forme de grille de cartes dynamiques.
+	2. Fiche Espace** ( espace.html?id=... )
+		◦ Page détaillée alimentée dynamiquement selon l'ID passé dans l'URL
+		( URLSearchParams ).
+		◦ Galerie photos, liste des équipements, grille tarifaire (heure / demi-journée /
+		journée), bouton d'ajout aux favoris.
+	3. Mes Espaces Enregistrés ( mes-espaces.html )
+		◦ Carnet de réservation/favoris géré via la Web Storage API ( localStorage ).
+	4. Contact ( contact.html ) !! NON PRESENT DANS L'ENNONCÉE !!
+		◦ Formulaire de contact !! NON PRESENT DANS L'ENNONCÉE !!
+		◦ Section L'equipe !! NON PRESENT DANS L'ENNONCÉE !!
+		◦ Section Localisation !! NON PRESENT DANS L'ENNONCÉE !!
+		
+		
+Besoins Fonctionnels:
+
+Section A : Ergonomie & Navigation Globale
+	Navigation Multi-Pages: Menu identique sur toutes les pages pour naviguer facilement, avec une indication visuelle de la page active. (fil d'ariane) !! NON PRESENT DANS LA MAQUETTE !!
+	Design Responsive Mobile-First: smartphone/tablette - fluide sans défilement horizontal.
+	
+Section B : Page Accueil & Recherche
+
+	Recherche & Filtres: Filtrer les espaces par ville, par capacité d'accueil (ex: 1 à 50 personnes) et par équipements requis (Fibre, Visioconférence, Accès PMR, Café).
+	Feedback & Gestion d'erreur: Indicateur de chargement (spinner) pendant les requêtes AJAX et recevoir un message explicite si aucun espace ne correspond.
+	
+Section C : Page Fiche Espace
+	Lecture d'URL dynamique : Clique sur espace = chargement dynamique de page (données d'un espace)
+	Détails & Grille Tarifaire: Consulter la description complète, l'adresse, la galerie photo et le tableau comparatif des tarifs (heure / demi-journée / journée).
+	Gestion des Favoris: Bouton "Sauvegarder dans mes espaces" pour ajouter ou retirer une salle de la sélection de "Mes Espaces"
+
+
+Section D : Page Mes Espaces
+    Espaces sauvegardés sur la page favoris (mes espaces??) même après fermeture et réouverture du navigateur. (localStorage)
+	Gestion de Sélection: Retirer un élément individuel ou vider la totalité de ma sélection en un clic.
+
+
+EXIGENCES SPÉCIFIQUES : RÉFÉRENCEMENT NATUREL (SEO B2B)
+
+	ProSpace Solutions exige un positionnement optimal sur Google pour capter le trafic B2B :
+
+	> "Chez **ProSpace Solutions**, nous visons la première place sur Google lorsqu'un
+	> décideur ou un responsable d'équipe cherche une salle de réunion ou un bureau à
+	> louer. Pour capter ce trafic professionnel qualifié, nous exigeons que le site
+	> réponde aux demandes suivantes :"
+	> 
+	Identité visuelle claire dans les résultats Google:
+	
+	1) Chaque page avec un titre et un résumé unique et percutants dans les resultats de recherche
+	
+	2) Transformer le titre du site en nome de l'espace en consultation de espace.html avec la capicité (ex: Espace Wagram - Salle de Réunion 20 p. | ProSpace Solutions ),
+
+	3) Rendre le site facile à explorer et rapide à charger
+	
+	4) Assurer que les moteurs de recherche	indexent sans peine l'ensemble de notre catalogue sans se perdre dans des pages inutiles
+	
+	5) Les images des salles ne doivent pas ralentir l'affichage du site sur mobile : je demande à ce que les visuels se chargent intelligemment
+		au fil du défilement pour garantir une navigation instantanée, critère essentiel pour être bien classé par Google
+
+
+
+Module & Page "Contact & Support"
+
+	Parcours Utilisateur & Redirection :
+
+	- Point d'entrée principal: Le bouton "Contacter l'équipe" présent sur chaque fiche d'établissement redirige l'utilisateur vers . ?????
+	- Pré-remplissage dynamique (Bonus) : Lors de la redirection depuis une fiche, l'objet du formulaire ou un champ masqué/dédié doit automatiquement inclure le nom de l'espace concerné.
+
+	1. Formulaire de contact dynamique (Accessible WCAG) :
+		- Champs requis: Nom complet, E-mail professionnel, Entreprise, Type de demande
+		- Gestion des états JS : Contrôle de saisie en temps réel (validation HTML5/JS), affichage des messages d'erreur accessibles ( aria-describedby ) et message de confirmation dynamique sans rechargement de page.
+
+	2. Bloc Informations Entreprise :
+		- Coordonnées du siège social ProSpace Solutions (Adresse, téléphone, email direct).
+		- Horaires d'ouverture du support client B2B
+
+	3. Composant Interactif : Carrousel de l'Équipe ("Team Showcase") :
+		- Fonctionnalité : Slider/Carrousel JavaScript (vanilla) présentant les membres de l'équipe support & account managers.
+		- Contenu par carte : Photo, Nom, Poste (ex: Account Manager Paris, Expert Espaces B2B), bouton direct d'envoi d'e-mail.
+		- Accessibilité du carrousel : Boutons Précédent / Suivant navigables au clavier, support des attributs aria-live pour annoncer le changement de slide aux lecteurs d'écran.
+
+EXIGENCES SPÉCIFIQUES : ACCESSIBILITÉ NUMÉRIQUE (WCAG 2.1 AA)
+
+	Navigation 100% Clavier: L'ensemble du site, y compris les filtres et boutons de sauvegarde, doit être utilisable uniquement avec TAB / ENTER / SPACE 
+	
+	Compatibilité Lecteur d'Écran:
+		◦ Boutons interactifs munis d'attributs dynamiques (ex: "Ajouter la Salle Wagram
+		aux favoris").
+		◦ Tableaux de tarifs structurés sémantiquement.
+
+	Contrastes Visuels: Respect strict des contrastes texte/fond. Ne jamais utiliser uniquement la couleur pour transmettre une information.
+
+CONTRAINTES TECHNIQUES & STACK IMPOSÉE
+
+	- HTML5 Sémantique
+	- SCSS Modulaire: Architecture modulaire inspirée du pattern 7-1 ( _variables.scss , _mixins.scss , _components.scss ). Variables, nesting (max 3 niveaux), au moins 2 mixins réutilisables. Frameworks CSS ok.
+	- JavaScript ES6+ Natif: async/await, fetch, URLSearchParams, localStorage, manipulation du DOM.
+	Le texte et contenu viens directement de la maquette.
+	Les images sont dans le dossier images a renommer pour l’optimisation SEO
+	Les icones sont a exporter en format svg via la maquette
+
+LIVRABLES ATTENDUS & DÉPLOIEMENT
+
+	1. Dépôt Git Public: Commits réguliers et atomiques rédigés tout au long de la semaine.
+	2. Fichier README.md complet:
+		◦ Présentation de l'architecture du projet.
+		◦ Documentation de l'API et du paramétrage URLSearchParams .
+		◦ Section SEO : Explication des métadonnées.
+		◦ Section Accessibilité : Captures d'écran des scores Lighthouse (> 90 sur SEO et A11y).
+
+
+
+Details:
+
+	- Tarifes suis la navigation "contained"
+	
+	

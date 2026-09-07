@@ -1,0 +1,50 @@
+/// Fichier SCSS pour les variables
+
+@use 'sass:map';
+
+
+/// Couleurs du site
+$primary-color: #FFF;
+$secondary-color: #38BDF8;
+$tertiary-color: #64748B; // footer text
+$info-text-primary: #475569; // footer copyright/conformité
+$info-text-secondary: #94A3B8; // hero banner features
+$background-color: #FFF;
+$secondary-background-color: #0F172A;
+
+$link-color: #90a1b9; // footer links
+
+$text-extra: #0284C7;
+
+$border-color: #1E293B;
+
+$hover-shadow: rgba(255, 255, 255, 0.1);
+$hover-shadow-light: rgba(0, 0, 0, 0.1);
+
+
+$primary-radius: 0.75rem;
+
+
+$tertiary-background-color: #F2F3EC;
+
+/// Tailles de police de texte
+$font-size: (
+    root: 16px,
+    footer-text: 0.688rem,
+    extra-small: 0.75rem, // yes
+    small: 0.875rem, // yes
+    standard: 1rem, // yes on h2
+    large: 1.875rem,
+    extra-large: 2.25rem, //yes
+    medium: 1.5rem,
+
+    big: 3.625rem,
+);
+
+
+$primary-font: ui-sans-serif, system-ui, sans-serif;
+
+
+
+
+
