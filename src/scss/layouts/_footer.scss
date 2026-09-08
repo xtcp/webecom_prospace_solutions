@@ -67,7 +67,7 @@ footer {
     }
     &-bottom {
         @include flex-col-space-between;
-        border-top: 1px solid $border-color;
+        border-top: 1px solid $primary-border-color;
         padding-top: 1.5rem;
         gap: 0.5rem;
         font-size: map.get($font-size, 'extra-small');

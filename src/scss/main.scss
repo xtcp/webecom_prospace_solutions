@@ -1,12 +1,7 @@
-/// A SCSS Test using SASS
 ///
-/// main SCSS File
+/// Fichier base SASS avec les includes
 /// 
-/// No options
 
-@use 'sass:math';
-@use 'sass:map';
-@use 'sass:selector';
 
 @use 'utils/variables' as *;
 
@@ -15,6 +10,8 @@
 
 @use 'components/buttons' as *;
 @use 'components/text' as *;
+@use 'components/card' as *;
+
 @use 'utils/mixins' as *;
 
 @use 'layouts/header' as *;

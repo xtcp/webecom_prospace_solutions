@@ -16,11 +16,19 @@ $link-color: #90a1b9; // footer links
 
 $text-extra: #0284C7;
 
-$border-color: #1E293B;
+$primary-border-color: #1E293B;
+$secondary-border-color: #E2E8F0;
+
+$box-border-color: #CBD5E1; // checkbox
+
+$star-color: #FBBF24; // review stars color
+$feature-background: #F1F5F9; // feature tag background
 
 $hover-shadow: rgba(255, 255, 255, 0.1);
 $hover-shadow-light: rgba(0, 0, 0, 0.1);
 
+$btn-primary-background: #0369A1;
+$btn-favorite-background: #F43F5E;
 
 $primary-radius: 0.75rem;
 
@@ -34,9 +42,11 @@ $font-size: (
     extra-small: 0.75rem, // yes
     small: 0.875rem, // yes
     standard: 1rem, // yes on h2
-    large: 1.875rem,
+    large: 1.25rem, // yes on price
     extra-large: 2.25rem, //yes
     medium: 1.5rem,
+
+    card-title: 0.9375rem, //yes
 
     big: 3.625rem,
 );
