@@ -75,7 +75,7 @@ header {
     align-items: center;
     gap: 0.5rem;
     mix-blend-mode: screen;
-    color: $tertiary-color;
+    color: $box-border-color;
 
     &:hover {
         background-color: $hover-shadow;

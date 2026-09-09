@@ -15,9 +15,7 @@
     &-background-image {
         position: absolute;
         inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        @include image-cover;
         opacity: 0.25;
     }
     &-primary-gradiant {

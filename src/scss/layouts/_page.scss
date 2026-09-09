@@ -1,6 +1,8 @@
 /// Fichier SCSS pour les styles du footer
 
 @use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+@use 'sass:map';
 
 .container {
     position: relative;
@@ -8,6 +10,12 @@
     margin: auto;
 
 }
-main {
-    background-color: #0F172A;
+
+.page-info {
+    @include flex-start-space-between;
+    margin-bottom: 2.5rem;
+    span {
+        color: $tertiary-color;
+        font-size: map.get($font-size, 'small');
+    }
 }

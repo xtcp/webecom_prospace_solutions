@@ -34,9 +34,12 @@ body {
     font-kerning: auto;
     font-size-adjust: none;
 }
-img {
+img, svg {
     display: block;
-    width: 100%;
+}
+svg {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
 }
 a {
     color: inherit;
@@ -55,9 +58,11 @@ p {
 }
 h1, h2 {
     font-weight: inherit;
+    margin: 0;
+    padding: 0;
 }
 h1 {
-    font-size: map.get($font-size, 'extra-large'); 
+    font-size: map.get($font-size, 'heading-big'); 
 }
 h2 {
     font-size: map.get($font-size, 'standard');
@@ -77,4 +82,7 @@ button {
     &:focus {
         outline: none;
     }
+}
+main {
+    background-color: $background-color;
 }

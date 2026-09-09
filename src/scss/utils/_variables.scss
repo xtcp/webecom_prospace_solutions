@@ -28,7 +28,12 @@ $hover-shadow: rgba(255, 255, 255, 0.1);
 $hover-shadow-light: rgba(0, 0, 0, 0.1);
 
 $btn-primary-background: #0369A1;
-$btn-favorite-background: #F43F5E;
+$btn-secondary-color: #E11D48;
+
+$highlight-color: #F43F5E;
+$highlight-color-light: #FDA4AF;
+$highlight-background: #FFF1F2;
+$highlight-border: #FECDD3;
 
 $primary-radius: 0.75rem;
 
@@ -43,7 +48,8 @@ $font-size: (
     small: 0.875rem, // yes
     standard: 1rem, // yes on h2
     large: 1.25rem, // yes on price
-    extra-large: 2.25rem, //yes
+    heading: 1.875rem, //yes
+    heading-big: 2.25rem, //yes h1 page-info
     medium: 1.5rem,
 
     card-title: 0.9375rem, //yes

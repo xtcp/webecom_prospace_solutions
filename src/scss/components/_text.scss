@@ -20,3 +20,13 @@
         cursor: pointer;
     }
 }
+.title {
+    
+    &-medium {
+        color: $secondary-background-color;
+        font-size: map.get($font-size, 'heading');
+        font-weight: 800;
+        margin-bottom: 0.25rem;
+
+    }
+}

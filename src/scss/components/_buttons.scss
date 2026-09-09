@@ -6,6 +6,7 @@
 @use 'sass:color';
 
 .btn {
+
     &-primary {
         padding: 0.5rem 1rem;
         background-color: $text-extra;
@@ -25,6 +26,52 @@
         &:focus-visible {
             outline: 2px solid $secondary-color;
             outline-offset: 2px;
+        }
+    }
+    &-secondary {
+        @include flex-start;
+        gap: 0.5rem;
+        padding: 0.625rem 1rem;
+        font-size: map.get($font-size, 'small');
+        font-weight: 600;
+        cursor: pointer;
+        
+        color: $primary-color;
+        background-color: $text-extra;
+        border: 1px solid $primary-color;
+
+        border-radius: 0.75rem;
+        transition: all 150ms ease;
+        box-shadow: 0 1px 3px 0 color.change($text-extra, $alpha: 0.2), 0 1px 2px -1px color.change($text-extra, $alpha: 0.2);
+
+        &:hover {
+            background-color: $btn-primary-background;
+        }
+
+        &-red {
+            font-weight: 500;
+            color: $btn-secondary-color;
+            border: 1px solid $highlight-border;
+            background-color: $background-color;
+            &:hover {
+                background-color: $highlight-background;
+                border-color: $highlight-color-light;
+            }
+        }
+        &-delete {
+            gap: 0.375rem;
+            padding: 0.625rem 0.75rem;
+            color: $tertiary-color;
+            border: 1px solid $secondary-border-color;
+            background-color: $background-color;
+            &:hover {
+                border-color: $highlight-color-light;
+                color: $highlight-color;
+                background-color: $highlight-background;
+            }
+        }
+        &-blue {
+
         }
     }
 

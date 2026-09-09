@@ -25,9 +25,7 @@
         background-color: $secondary-border-color;
         aspect-ratio: 4 / 3;
         img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            @include image-cover;
         }
         &-favorite {
             position: absolute;
@@ -41,14 +39,15 @@
             justify-content: center;
             backdrop-filter: blur(4px);
             transition: all 150ms ease;
-            background-color: $btn-favorite-background;
+            background-color: $highlight-color;
             color: $background-color;
-            box-shadow: 0 4px 6px -1px color.change($btn-favorite-background, $alpha: 0.3), 0 2px 4px -2px color.change($btn-favorite-background, $alpha: 0.3);
+            box-shadow: 0 4px 6px -1px color.change($highlight-color, $alpha: 0.3), 0 2px 4px -2px color.change($highlight-color, $alpha: 0.3);
             svg {
                 fill: $background-color;
             }
         }
     }
+    
     &-info {
         padding: 1.25rem;
         @include flex-col;
@@ -67,22 +66,34 @@
         color: $tertiary-color;
         font-size: map.get($font-size, 'small');
         margin-bottom: 0.75rem;
+        > svg {
+            color: $text-extra;
+            flex-shrink: 0;
+        }
     }
     &-reviews {
         @include flex-start;
         gap: 0.625rem;
         margin-bottom: 0.75rem;
         font-size: map.get($font-size, 'extra-small');
-        &__stars > svg {
-            fill: $star-color;
-            color: $star-color;
-        }   
+        &__stars {
+            display: flex;
+            align-items: center;
+            gap: 0.125rem;
+            > svg {
+                fill: $star-color;
+                color: $star-color;
+            }
+        }
         &__value {
             font-weight: 600;
             color: $secondary-background-color;
         }
         &__quant {
             color: $info-text-secondary;
+            &-small {
+                font-size: map.get($font-size, 'extra-small');
+            }
         }
     }
     &-features {
@@ -119,21 +130,113 @@
         justify-content: space-between;
         padding-top: 1rem;
         border-top: 1px solid $feature-background;
-        &__price {
-            display: flex;
-            align-items: baseline;
-            gap: 0.25rem;
+    }
+    &-price {
+        display: flex;
+        align-items: baseline;
+        gap: 0.25rem;
+        span:first-of-type {
+            font-family: monospace;
+            font-weight: 700;
+            color: $text-extra;
+            font-size: map.get($font-size, 'large');
+            font-variant-numeric: tabular-nums;
+        }
+        span:last-of-type {
+            color: $info-text-secondary;
+            font-size: map.get($font-size, 'extra-small');
+        }
+        &-small {
             span:first-of-type {
-                font-family: monospace;
-                font-weight: 700;
-                color: $text-extra;
-                font-size: map.get($font-size, 'large');
-                font-variant-numeric: tabular-nums;
-            }
-            span:last-of-type {
-                color: $info-text-secondary;
-                font-size: map.get($font-size, 'extra-small');
+                font-size: map.get($font-size, 'standard');
             }
         }
     }
+    
+}
+.space-card-horizontal {
+    flex-direction: row;
+    overflow: hidden;
+    transition: all 200ms ease;
+    &:hover {
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        transform: none;
+    }
+    &:hover .space-card-image img { transform: scale(1.05); }
+    .space-card-image {
+        width: 9rem;
+        aspect-ratio: unset;
+        flex-shrink: 0;
+
+        @media (min-width: 640px) {
+            width: 13rem;
+        }
+        img {
+            transition: transform 500ms ease;
+        }
+    }
+    
+    .space-card-features-capacity {
+
+        color: $tertiary-color;
+    }
+    &-info-container {
+        flex: 1;
+        padding: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        min-width: 0;
+
+        @media (min-width: 640px) {
+            flex-direction: row;
+            align-items: center;
+        }
+
+    }
+    .space-card-info {
+        margin: 0;
+        padding: 0;
+        flex: 1;
+        min-width: 0;
+        h3 {
+            font-weight: 700;
+            font-size: map.get($font-size, 'standard');
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-top: 0;
+            margin-bottom: 0.25rem;
+            line-height: 1.5rem;
+        }
+    }
+    .space-card-cta {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-shrink: 0;
+    }
+    .space-card-features {
+        @include flex-start-wrap;
+        gap: 1rem;
+        margin: 0;
+    }
+    .space-card-reviews {
+        display: flex;
+        align-items: center;
+        gap: 0.375rem;
+        margin: 0
+    }
+    &-cta {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        flex-shrink: 0;
+    }
+    &-container {
+        & > :not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+    
 }
