@@ -7,6 +7,7 @@
 
 .btn {
 
+
     &-primary {
         padding: 0.5rem 1rem;
         background-color: $text-extra;
@@ -70,9 +71,42 @@
                 background-color: $highlight-background;
             }
         }
-        &-blue {
+    }
+}
+.box-btn {
+    @include flex-center;
+    width: 100%;
+    gap: 0.625rem;
+    padding: 0.875rem 0;
+    border-radius: 0.75rem;
+    background-color: $text-extra;
+    color: $primary-color;
+    font-weight: 700;
+    font-size: map.get($font-size, 'small');
+    transition: all 150ms ease;
+    box-shadow: 0 10px 15px -3px color.change($text-extra, $alpha: 0.25), 0 4px 6px -4px color.change($text-extra, $alpha: 0.25); // shadow-lg shadow-[#0284C7]/25
 
+    &:hover {
+        background-color: $btn-primary-background;
+    }
+    &:active {
+        background-color: $btn-active;
+    }
+    &:focus-visible {
+        outline: 2px solid $secondary-color;
+        outline-offset: 2px;
+    }
+    &-secondary {
+        padding: 0.75rem 0;
+        border: 2px solid $secondary-border-color;
+        font-weight: 600;
+        color: $tertiary-color;
+        background-color: $background-color;
+        box-shadow: none;
+        &:hover {
+            border-color: $text-extra;
+            color: $text-extra;
+            background-color: #F0F9FF;
         }
     }
-
 }

@@ -11,7 +11,7 @@
 .hero {
     position: relative;
     overflow: hidden;
-    background-color: #0F172A;
+    background-color: $secondary-background-color;
     &-background-image {
         position: absolute;
         inset: 0;
@@ -23,7 +23,7 @@
         inset: 0;
         background: linear-gradient(
             to right,
-            #0F172A 0%,
+            $secondary-background-color 0%,
             rgba(15, 23, 42, 0.75) 50%,
             rgba(15, 23, 42, 0.3) 100%
         );
@@ -144,7 +144,7 @@
         border: 1px solid $secondary-border-color;
         border-radius: 0.5rem;
         font-size: map.get($font-size, 'small');
-        color: #0F172A;
+        color: $secondary-background-color;
         background-color: $primary-color;
         cursor: pointer;
         transition: all 150ms ease;

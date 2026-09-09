@@ -6,16 +6,20 @@
 
 .container {
     position: relative;
-    
     margin: auto;
-
 }
 
 .page-info {
     @include flex-start-space-between;
     margin-bottom: 2.5rem;
-    span {
+    span:not(.text-bold) {
         color: $tertiary-color;
         font-size: map.get($font-size, 'small');
+    }
+    &-description {
+        &-details {
+            @include flex-start-wrap;
+            gap: 1.25rem;
+        }
     }
 }

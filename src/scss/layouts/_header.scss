@@ -55,7 +55,7 @@ header {
         border-radius: 50%;
         width: 1.25rem;
         height: 1.25rem;
-        background-color: #0284C7;
+        background-color: $text-extra;
         color: white;
         font-size: map.get($font-size, 'extra-small');
         line-height: 1rem;

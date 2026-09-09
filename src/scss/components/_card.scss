@@ -55,7 +55,7 @@
         h3 {
             font-weight: 600;
             color: $secondary-background-color;
-            font-size: map.get($font-size, 'card-title');
+            font-size: map.get($font-size, 'paragraph');
             margin-bottom: 0.25rem;
             line-height: 1.375;
         }

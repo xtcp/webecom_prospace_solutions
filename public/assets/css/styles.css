@@ -150,16 +150,55 @@ main {
   color: #F43F5E;
   background-color: #FFF1F2;
 }
+
+.box-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.625rem;
+  padding: 0.875rem 0;
+  border-radius: 0.75rem;
+  background-color: #0284C7;
+  color: #FFF;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: all 150ms ease;
+  box-shadow: 0 10px 15px -3px rgba(2, 132, 199, 0.25), 0 4px 6px -4px rgba(2, 132, 199, 0.25);
+}
+.box-btn:hover {
+  background-color: #0369A1;
+}
+.box-btn:active {
+  background-color: #075985;
+}
+.box-btn:focus-visible {
+  outline: 2px solid #38BDF8;
+  outline-offset: 2px;
+}
+.box-btn-secondary {
+  padding: 0.75rem 0;
+  border: 2px solid #E2E8F0;
+  font-weight: 600;
+  color: #64748B;
+  background-color: #FFF;
+  box-shadow: none;
+}
+.box-btn-secondary:hover {
+  border-color: #0284C7;
+  color: #0284C7;
+  background-color: #F0F9FF;
+}
+
 .text-blue {
   color: #38BDF8;
 }
-
 .text-info {
   font-size: 0.875rem;
   line-height: 1.25rem;
   color: #94A3B8;
 }
-
 .text-link {
   text-decoration: underline;
   text-underline-offset: 2px;
@@ -168,12 +207,39 @@ main {
   color: #38BDF8;
   cursor: pointer;
 }
-
-.title-medium {
+.text-bold {
+  font-weight: 700;
   color: #0F172A;
-  font-size: 1.875rem;
+  font-size: 0.875rem;
+}
+
+.title {
+  font-size: 1.25rem;
   font-weight: 800;
+  color: #0F172A;
+}
+.title-big {
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+@media (min-width: 640px) {
+  .title-big {
+    font-size: 2.25rem;
+  }
+}
+.title-medium {
+  font-size: 1.875rem;
   margin-bottom: 0.25rem;
+}
+.title-category {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.title-box {
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
 }
 
 .space-card {
@@ -419,6 +485,19 @@ main {
   margin-bottom: 1rem;
 }
 
+.box {
+  background-color: #FFF;
+  border-radius: 1rem;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 20px 25px -5px rgba(226, 232, 240, 0.6), 0 8px 10px -6px rgba(226, 232, 240, 0.6);
+  padding: 1.5rem;
+}
+.box-tertiary {
+  background-color: #F0F9FF;
+  border: 1px solid #BAE6FD;
+  box-shadow: none;
+}
+
 header {
   color: #FFF;
   background-color: #0F172A;
@@ -644,9 +723,16 @@ footer {
   align-items: start;
   margin-bottom: 2.5rem;
 }
-.page-info span {
+.page-info span:not(.text-bold) {
   color: #64748B;
   font-size: 0.875rem;
+}
+.page-info-description-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.25rem;
 }
 
 .hero {
@@ -870,6 +956,188 @@ footer {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+}
+
+.space {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+@media (min-width: 640px) {
+  .space {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.space-images {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+  height: 260px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+@media (min-width: 640px) {
+  .space-images {
+    height: 400px;
+  }
+}
+.space-images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms ease;
+}
+.space-images img:hover {
+  transform: scale(1.05);
+}
+.space-images-primary {
+  grid-column: span 2/span 2;
+  background-color: #E2E8F0;
+  overflow: hidden;
+}
+.space-images-side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.space-images-side div:first-child {
+  flex: 1;
+  background-color: #E2E8F0;
+  overflow: hidden;
+  border-top-right-radius: 1rem;
+}
+.space-images-side div:last-child {
+  flex: 1;
+  background-color: #E2E8F0;
+  overflow: hidden;
+  border-bottom-right-radius: 1rem;
+}
+
+.space-details {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+@media (min-width: 1024px) {
+  .space-details {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.space-details-info > * + * {
+  margin-top: 2.5rem;
+}
+@media (min-width: 1024px) {
+  .space-details-info {
+    grid-column: span 2/span 2;
+  }
+}
+.space-details-info div:first-child p {
+  font-size: 0.9375rem;
+  color: #475569;
+  line-height: 1.625;
+}
+
+.space-details-features h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 1.25rem;
+}
+.space-details-features-list {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+@media (min-width: 640px) {
+  .space-details-features-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.space-details-features-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: #334155;
+  background-color: #FFF;
+  border: 1px solid #F1F5F9;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+}
+.space-details-features-list li svg {
+  color: #0284C7;
+}
+
+.space-details-config {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: #475569;
+  font-size: 0.875rem;
+}
+
+.space-details-princing {
+  position: sticky;
+  top: 7rem;
+}
+.space-details-princing-list > * + * {
+  margin-top: 0.25rem;
+}
+.space-details-princing-list {
+  margin-bottom: 1.75rem;
+}
+.space-details-princing-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #F1F5F9;
+}
+.space-details-princing-line div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748B;
+  font-size: 0.875rem;
+}
+.space-details-princing-line > span {
+  font-family: monospace;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: #0F172A;
+  font-size: 1.25rem;
+}
+.space-details-princing-line-highlight div {
+  font-weight: 600;
+  color: #0F172A;
+}
+.space-details-princing-line-highlight div > svg {
+  color: #0284C7;
+}
+.space-details-princing-line-highlight > span {
+  font-family: monospace;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: #0284C7;
+  font-size: 1.5rem;
+}
+.space-details-princing-cta > * + * {
+  margin-top: 0.75rem;
+}
+.space-details-princing-note {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #94A3B8;
+  margin-top: 1rem;
+  line-height: 1.625;
 }
 
 /*# sourceMappingURL=styles.css.map */
