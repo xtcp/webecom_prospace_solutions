@@ -1,0 +1,13 @@
+/// Fichier SCSS pour les styles des etoils des avis (reviews)
+/// 
+@use '../utils/variables' as *;
+
+.star-container {
+    display: flex;
+    align-items: center;
+    gap: 0.125rem;
+    > svg {
+        fill: $star-color;
+        color: $star-color;
+    }
+}

@@ -53,7 +53,7 @@
             font-weight: 500;
             color: $btn-secondary-color;
             border: 1px solid $highlight-border;
-            background-color: $background-color;
+            background-color: $btn-secondary-background;
             &:hover {
                 background-color: $highlight-background;
                 border-color: $highlight-color-light;
@@ -63,8 +63,8 @@
             gap: 0.375rem;
             padding: 0.625rem 0.75rem;
             color: $tertiary-color;
-            border: 1px solid $secondary-border-color;
-            background-color: $background-color;
+            border: 1px solid $border-color-secondary;
+            background-color: $btn-tertiary-background;
             &:hover {
                 border-color: $highlight-color-light;
                 color: $highlight-color;
@@ -84,7 +84,7 @@
     font-weight: 700;
     font-size: map.get($font-size, 'small');
     transition: all 150ms ease;
-    box-shadow: 0 10px 15px -3px color.change($text-extra, $alpha: 0.25), 0 4px 6px -4px color.change($text-extra, $alpha: 0.25); // shadow-lg shadow-[#0284C7]/25
+    box-shadow: 0 10px 15px -3px color.change($text-extra, $alpha: 0.25), 0 4px 6px -4px color.change($text-extra, $alpha: 0.25);
 
     &:hover {
         background-color: $btn-primary-background;
@@ -98,15 +98,51 @@
     }
     &-secondary {
         padding: 0.75rem 0;
-        border: 2px solid $secondary-border-color;
+        border: 2px solid $border-color-secondary;
         font-weight: 600;
         color: $tertiary-color;
-        background-color: $background-color;
+        background-color: $btn-tertiary-background;
         box-shadow: none;
         &:hover {
             border-color: $text-extra;
             color: $text-extra;
-            background-color: #F0F9FF;
+            background-color: $btn-tertiary-background;
         }
     }
+}
+.btn-carousel {
+    &-arrow {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 9999px;
+        border: 2px solid $border-color-secondary;
+        color: $tertiary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 150ms ease;
+
+        &:hover {
+            border-color: $text-extra;
+            background-color: $text-extra;
+            color: $primary-color;
+        }
+    }
+    &-dot {
+        border-radius: 9999px;
+        transition: all 200ms ease;
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: $box-border-color;
+
+        &:hover {
+            background-color: $info-text-secondary; 
+        }
+        &-active {
+            width: 1.5rem;
+            height: 0.5rem;
+            background-color: $text-extra;
+        }
+    }
+
 }

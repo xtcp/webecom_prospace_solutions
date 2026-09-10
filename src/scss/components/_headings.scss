@@ -1,0 +1,37 @@
+
+/// Fichier SCSS pour les styles des en-têtes (headings)
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+@use 'sass:map';
+@use 'sass:color';
+
+.heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    p:first-of-type {
+        color: $secondary-color;
+        font-size: map.get($font-size, 'extra-small');
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+    }
+    h2 {
+        font-size: map.get($font-size, 'heading');
+        font-weight: 800;
+        color: $background-color-secondary;
+        margin-bottom: 1rem;
+
+        @media (min-width: 640px) {
+            font-size: map.get($font-size, 'heading-big');
+        }
+    }
+    p:last-of-type {
+        color: $tertiary-color;
+        font-size: map.get($font-size, 'standard');
+        max-width: 32rem;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.625;
+    }
+}

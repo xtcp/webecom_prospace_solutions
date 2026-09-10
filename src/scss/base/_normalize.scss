@@ -7,11 +7,12 @@
 @use '../utils/variables' as *;
 @use '../utils/mixins' as *;
 
+
 html {
     font-size: map.get($font-size, 'root');
 }
 body {
-    background-color: $secondary-background-color;
+    background-color: $background-color-secondary;
     color: $primary-color;
     margin: 0;
     padding: 0;
@@ -33,6 +34,12 @@ body {
     font-feature-settings: normal;
     font-kerning: auto;
     font-size-adjust: none;
+}
+*, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
 }
 img, svg {
     display: block;
@@ -84,5 +91,18 @@ button {
     }
 }
 main {
-    background-color: $background-color;
+    background-color: $background-color-primary;
+}
+button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+}
+label {
+    line-height: 1.5;
 }

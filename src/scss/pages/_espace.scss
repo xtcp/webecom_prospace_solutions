@@ -6,14 +6,7 @@
 @use 'sass:color';
 
 .space {
-    max-width: 80rem;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-
-    @media (min-width: 640px) {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
+    @include container(2rem, 2rem);
 }
 .space-images {
     display: grid;
@@ -35,7 +28,7 @@
     }
     &-primary {
         grid-column: span 2 / span 2;
-        background-color: $secondary-border-color;
+        background-color: $border-color-secondary;
         overflow: hidden;
     }
     &-side {
@@ -44,13 +37,13 @@
         gap: 0.75rem;
         div:first-child {
             flex: 1;
-            background-color: $secondary-border-color;
+            background-color: $border-color-secondary;
             overflow: hidden;
             border-top-right-radius: 1rem; 
         }
         div:last-child {
             flex: 1;
-            background-color: $secondary-border-color;
+            background-color: $border-color-secondary;
             overflow: hidden;
             border-bottom-right-radius: 1rem;
         }
@@ -66,10 +59,9 @@
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     &-info {
-        & > * + * {
+        & > :not(:last-child) {
             margin-top: 2.5rem;
         }
-
         @media (min-width: 1024px) {
             grid-column: span 2 / span 2;
         }
@@ -87,7 +79,7 @@
     h2 {
         font-size: 1.25rem;
         font-weight: 700;
-        color: $secondary-background-color;
+        color: $background-color-secondary;
         margin-bottom: 1.25rem;
     }
     &-list {
@@ -123,7 +115,7 @@
     position: sticky;
     top: 7rem;
     &-list {
-        & > * + * {
+        & > :not(:last-child) {
             margin-top: 0.25rem;
         }
         margin-bottom: 1.75rem;
@@ -142,13 +134,13 @@
             font-family: monospace;
             font-weight: 800;
             font-variant-numeric: tabular-nums;
-            color: $secondary-background-color;
+            color: $background-color-secondary;
             font-size: 1.25rem;
         }
         &-highlight {
             div {
                 font-weight: 600;
-                color: $secondary-background-color;
+                color: $background-color-secondary;
                 > svg {
                     color: $text-extra;
                 }
@@ -163,7 +155,7 @@
         }
     }
     &-cta {
-        & > * + * {
+        & > :not(:last-child) {
             margin-top: 0.75rem;
         }
     }

@@ -9,17 +9,22 @@ $secondary-color: #38BDF8;
 $tertiary-color: #64748B; // footer text
 $info-text-primary: #475569; // footer copyright/conformité
 $info-text-secondary: #94A3B8; // hero banner features
-$background-color: #FFF;
-$secondary-background-color: #0F172A;
+
+$background-color-primary: #F8FAFC;
+$background-color-secondary: #0F172A;
+$background-color-tertiary: #FFF;
 
 $link-color: #90a1b9; // footer links
 
 $text-extra: #0284C7;
 
-$primary-border-color: #1E293B;
-$secondary-border-color: #E2E8F0;
+$border-color-primary: #1E293B;
+$border-color-secondary: #E2E8F0;
 
 $box-border-color: #CBD5E1; // checkbox
+$box-border-secondary: #BAE6FD;
+$box-background-primary: #FFF;
+$box-background-secondary: #F0F9FF;
 
 $star-color: #FBBF24; // review stars color
 $feature-background: #F1F5F9; // feature tag background
@@ -29,6 +34,9 @@ $hover-shadow-light: rgba(0, 0, 0, 0.1);
 
 $btn-active: #075985;
 $btn-primary-background: #0369A1;
+$btn-secondary-background: #FFF;
+$btn-tertiary-background: #F0F9FF;
+
 $btn-secondary-color: #E11D48;
 
 $highlight-color: #F43F5E;
@@ -37,10 +45,13 @@ $highlight-background: #FFF1F2;
 $highlight-border: #FECDD3;
 
 
+
 $primary-radius: 0.75rem;
 
-
-$tertiary-background-color: #F2F3EC;
+$container-max-size: 80rem;
+$container-vertical-padding: 3rem;
+$container-horizontal-padding: 1rem;
+$container-padding-small: 1.5rem;
 
 /// Tailles de police de texte
 $font-size: (
@@ -50,6 +61,7 @@ $font-size: (
     small: 0.875rem, // yes
     standard: 1rem, // yes on h2
     large: 1.25rem, // yes on price
+    heading-small: 1.125rem, // contact box title
     heading: 1.875rem, //yes
     heading-big: 2.25rem, //yes h1 page-info
     medium: 1.5rem,

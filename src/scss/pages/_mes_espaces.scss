@@ -6,12 +6,5 @@
 @use 'sass:color';
 
 .my_spaces {
-    max-width: 64rem;
-    margin: 0 auto;
-    padding: 3rem 1rem;
-
-    @media (min-width: 640px) {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
+    @include container($max-width: 64rem)
 }

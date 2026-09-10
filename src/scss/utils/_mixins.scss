@@ -19,6 +19,47 @@
     }
 }
 
+
+@mixin container ($padding-top: $container-vertical-padding, $padding-bottom: $container-vertical-padding, $padding-right: $container-horizontal-padding, $padding-left: $container-horizontal-padding, $padding-left-small: $container-padding-small, $padding-right-small: $container-padding-small, $max-width: $container-max-size) {
+///
+/// mixin container-inner() pour les containers et inners
+/// 
+/// Rôle: Definir le CSS d'un container/inner en utilisant les valeurs par defaut en _variables.scss ou en les remplacent dans les paramètres
+/// 
+/// Paramètres:
+///     padding-top (container-vertical-padding par défaut)
+///     padding-bottom (container-vertical-padding par défaut)
+///     padding-left (container-horizontal-padding par défaut)
+///     padding-right (container-horizontal-padding par défaut)
+///     padding-left-small (container-padding-small par défaut)
+///     max-width: (container-max-size par défaut)
+/// 
+/// Examples d'utilisation:
+/// 
+///     Un container avec le padding par default mais un max-width different:
+///         @include container-inner($max-width: 30rem)
+/// 
+///     Un container avec un padding vertical different:
+///         @include container-inner(3rem, 3rem)
+/// 
+///     Un container avec un padding small different:
+///         @include container-inner($padding-left-small: 3rem, $padding-right-small: 3rem)
+///
+///     Un container sans padding vertical et un padding horizontal different:
+///         @include container-inner(0, 0, 3rem, 3rem)
+
+    max-width: $max-width;
+    margin: 0 auto;
+    padding-right: $padding-right;
+    padding-left: $padding-left;
+    padding-top: $padding-top;
+    padding-bottom: $padding-bottom;
+    
+    @media (min-width: 640px) {
+        padding-left: $padding-left-small;
+        padding-right: $padding-right-small;
+    }
+}
 @mixin flex-start {
     display: flex;
     flex-direction: row;
@@ -64,6 +105,12 @@
 @mixin flex-col {
     display: flex;
     flex-direction: column;
+}
+@mixin flex-col-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 @mixin flex-col-space-between {
     display: flex;

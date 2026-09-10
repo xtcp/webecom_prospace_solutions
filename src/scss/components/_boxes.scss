@@ -7,18 +7,17 @@
 
 .box {
 
-    background-color: $primary-color;
+    background-color: $box-background-primary;
     border-radius: 1rem;
-    border: 1px solid #E2E8F0;
-    box-shadow: 0 20px 25px -5px color.change($secondary-border-color, $alpha: 0.6), 0 8px 10px -6px color.change($secondary-border-color, $alpha: 0.6);
+    border: 1px solid $border-color-secondary;
+    box-shadow: 0 20px 25px -5px color.change($border-color-secondary, $alpha: 0.6), 0 8px 10px -6px color.change($border-color-secondary, $alpha: 0.6);
     padding: 1.5rem;
+    overflow: hidden;
 
     &-secondary {
-
-    }
-    &-tertiary {
-        background-color: #F0F9FF;
-        border: 1px solid #BAE6FD;
+        background-color: $box-background-secondary;
+        border: 1px solid $box-border-secondary;
         box-shadow: none;
     }
 }
+
