@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Alexandre Moreau",
+        "role": "CEO & Co-fondateur",
+        "image": "/public/assets/images/team/alexandre-moreau-ceo-co-fondateur.webp",
+        "email": "alexandre.moreau@prospacesolutions.fr"
+    },
+    {
+        "id": 2,
+        "name": "Sophie Leclerc",
+        "role": "Directrice Commerciale",
+        "image": "/public/assets/images/team/sophie-leclerc-directrice-commerciale.webp",
+        "email": "sophie.leclerc@prospacesolutions.fr"
+    },
+    {
+        "id": 3,
+        "name": "Thomas Bergeron",
+        "role": "Responsable Partenariats",
+        "image": "/public/assets/images/team/thomas-bergeron-responsable-partenariats.webp",
+        "email": "thomas.bergeron@prospacesolutions.fr"
+    },
+    {
+        "id": 4,
+        "name": "Marine Dubois",
+        "role": "Responsable Partenariats",
+        "image": "/public/assets/images/team/marine-dubois-chargee-clientele.webp",
+        "email": "marine.dubois@prospacesolutions.fr"
+    },
+    {
+        "id": 5,
+        "name": "Julien Fontaine",
+        "role": "Directeur Technique",
+        "image": "/public/assets/images/team/julien-fontaine-directeur-technique.webp",
+        "email": "julien.fontaine@prospacesolutions.fr"
+    },
+    {
+        "id": 6,
+        "name": "Camille Roux",
+        "role": "Responsable Marketing",
+        "image": "/public/assets/images/team/camille-roux-responsable-marketing.webp",
+        "email": "camille.roux@prospacesolutions.fr"
+    },
+    {
+        "id": 7,
+        "name": "Élodie Garnier",
+        "role": "Chargée des Opérations",
+        "image": "/public/assets/images/team/elodie-garnier-chargee-operations.webp",
+        "email": "elodie.garnier@prospacesolutions.fr"
+    },
+    {
+        "id": 8,
+        "name": "Nicolas Vidal",
+        "role": "Responsable Support",
+        "image": "/public/assets/images/team/nicolas-vidal-responsable-support.webp",
+        "email": "nicolas.vidal@prospacesolutions.fr"
+    }
+]

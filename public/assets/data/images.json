@@ -1,0 +1,42 @@
+[
+    {
+        "id": "salle-reunion-chaises-oranges-flou.webp",
+        "alt": "Une salle de conférence avec table et chaises oranges",
+        "path": "/public/assets/images/spaces/salle-reunion-chaises-oranges-flou.webp"
+    },
+    {
+        "id": "atelier-republique-salle-reunion-ecrans.webp",
+        "alt": "Atelier République, une salle de réunion bien éclairée avec de grands écrans de présentation",
+        "path": "/public/assets/images/spaces/atelier-republique-salle-reunion-ecrans.webp"
+    },
+    {
+        "id": "les-chartrons-board-room-bureau-noir-blanc.webp",
+        "alt": "Chaise et bureau metaliques en noir et blanc",
+        "path": "/public/assets/images/spaces/les-chartrons-board-room-bureau-noir-blanc.webp"
+    },
+    {
+        "id": "salle-reunion-chaises-oranges-flou.webp",
+        "alt": "Une salle de conférence avec table et chaises oranges",
+        "path": "/public/assets/images/spaces/salle-reunion-chaises-oranges-flou.webp"
+    },
+    {
+        "id": "ile-de-nantes-studio-table-chaises-orange.webp",
+        "alt": "Île de Nantes Studio avec table et chaises orange",
+        "path": "/public/assets/images/spaces/ile-de-nantes-studio-table-chaises-orange.webp"
+    },
+    {
+        "id": "salle-reunion-chaises-orange-rose.webp",
+        "alt": "Une salle de reunion avec table et chaises oranges et une chaise rose",
+        "path": "/public/assets/images/spaces/salle-reunion-chaises-orange-rose.webp"
+    },
+    {
+        "id": "confluence-executive-suite-bureau-lumineux.webp",
+        "alt": "Suite Executive Confluence - bureaux lumineux",
+        "path": "/public/assets/images/spaces/confluence-executive-suite-bureau-lumineux.webp"
+    },
+    {
+        "id": "wagram-opera-salle-reunion-chaises-oranges.webp",
+        "alt": "Wagram Opera - Salle de Reunion avec chaises oranges",
+        "path": "/public/assets/images/spaces/wagram-opera-salle-reunion-chaises-oranges.webp"
+    }
+]

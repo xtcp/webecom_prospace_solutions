@@ -1,0 +1,31 @@
+/// Fichier SCSS pour le chargement (indicateur de chargement)
+
+@use '../utils/variables' as *;
+@use '../utils/mixins' as *;
+@use 'sass:map';
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+// container en chargement
+.is-loading {
+    opacity: 0.4;
+    pointer-events: none;
+    transition: opacity 200ms ease;
+}
+.spinner {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 9999px;
+    border: 2px solid $border-color-secondary;
+    border-top-color: $text-extra;
+    animation: spin 700ms linear infinite;
+    display: inline-block;
+    color: $background-color-secondary;
+}
+.spaces-loading {
+    @include flex-center;
+    font-size: map.get($font-size, 'large');
+    gap: 1rem;
+    color: $link-color;
+}

@@ -65,5 +65,25 @@ form {
         accent-color: $text-extra;
         cursor: pointer
     }
-
+}
+.form {
+    &-field {
+        &-error {
+            color: $highlight-color;
+        }
+    }
+    &-confirmation {
+        color: $highlight-success;
+        background-color: $highlight-success-light;
+        border: 1px solid $highlight-success;
+        border-radius: $primary-radius;
+        padding: 0.875rem 1rem;
+        font-size: map.get($font-size, 'small');
+        margin-top: 1rem;
+        &-error {
+            color: $highlight-color;
+            background-color: $highlight-color-light;
+            border-color: $highlight-color;
+        }
+    }
 }

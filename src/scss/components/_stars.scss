@@ -6,8 +6,16 @@
     display: flex;
     align-items: center;
     gap: 0.125rem;
-    > svg {
-        fill: $star-color;
-        color: $star-color;
+    .star-filled {
+        > svg {
+            fill: $star-color;
+            color: $star-color;
+        }
+    }
+    .star-empty {
+        > svg {
+            fill: $background-color-primary;
+            color: $star-color;
+        }
     }
 }

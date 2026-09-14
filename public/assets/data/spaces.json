@@ -1,0 +1,179 @@
+[
+    {
+        "id": 1,
+        "name": "Espace Wagram Opéra",
+        "city": "paris",
+        "cityLabel": "Paris",
+        "district": "Paris 8e",
+        "address": "12 Avenue de Wagram, 75008 Paris",
+        "description": "Salle de réunion lumineuse au cœur du quartier de l'Opéra, idéale pour les comités de direction et les rendez-vous clients exigeants.",
+        "capacity": 12,
+        "capacityTier": 3,
+        "rating": 3,
+        "reviewCount": 34,
+        "features": ["Fibre", "PMR", "4K"],
+        "features_extended": [
+            "WiFi Fibre 1 Gb/s",
+            "Écran 4K 86''",
+            "Visioconférence intégrée",
+            "Tableau blanc interactif",
+            "Accès PMR complet",
+            "Climatisation réversible",
+            "Café & eau inclus",
+            "Parking sécurisé -1"
+        ],
+        "pricing": { "hour": 45, "halfDay": 160, "day": 280 },
+        "image": "wagram-opera-salle-reunion-chaises-oranges.webp",
+        "images": [
+            "wagram-opera-salle-reunion-chaises-oranges.webp",
+            "atelier-republique-salle-reunion-ecrans.webp",
+            "salle-reunion-chaises-oranges-flou.webp"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Atelier République",
+        "city": "paris",
+        "cityLabel": "Paris",
+        "district": "Paris 11e",
+        "address": "8 Place de la République, 75011 Paris",
+        "description": "Espace de travail modulable proche République, parfait pour les ateliers d'équipe et les sessions de brainstorming.",
+        "capacity": 8,
+        "capacityTier": 2,
+        "rating": 4.6,
+        "reviewCount": 51,
+        "features": ["Fibre", "4K"],
+        "features_extended": [
+            "WiFi Fibre 500 Mb/s",
+            "Écran 4K 75''",
+            "Tableau blanc magnétique",
+            "Cuisine équipée",
+            "Terrasse privative",
+            "Lumière naturelle zénithale"
+        ],
+        "pricing": { "hour": 35, "halfDay": 125, "day": 210 },
+        "image": "atelier-republique-salle-reunion-ecrans.webp",
+        "images": [
+            "atelier-republique-salle-reunion-ecrans.webp",
+            "confluence-executive-suite-bureau-lumineux.webp",
+            "salle-reunion-chaises-oranges-flou.webp"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Confluence Executive Suite",
+        "city": "lyon",
+        "cityLabel": "Lyon",
+        "district": "Lyon 2e",
+        "address": "22 Quai Rambaud, 69002 Lyon",
+        "description": "Suite exécutive avec vue sur la Saône, pensée pour les conseils d'administration et les négociations B2B.",
+        "capacity": 20,
+        "capacityTier": 4,
+        "rating": 4.9,
+        "reviewCount": 22,
+        "features": ["Fibre", "PMR", "4K"],
+        "features_extended": [
+            "WiFi Fibre 10 Gb/s",
+            "Double écran 4K 98''",
+            "Accès PMR complet",
+            "Catering sur demande",
+            "Parking privatif 10 places",
+            "Service conciergerie",
+            "Système son Bose intégré"
+        ],
+        "pricing": { "hour": 55, "halfDay": 195, "day": 340 },
+        "image": "confluence-executive-suite-bureau-lumineux.webp",
+        "images": [
+            "confluence-executive-suite-bureau-lumineux.webp",
+            "atelier-republique-salle-reunion-ecrans.webp",
+            "les-chartrons-board-room-bureau-noir-blanc.webp"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Les Chartrons Board Room",
+        "city": "bordeaux",
+        "cityLabel": "Bordeaux",
+        "district": "Bordeaux Chartrons",
+        "address": "5 Rue Notre-Dame, 33000 Bordeaux",
+        "description": "Salle de conseil au caractère affirmé, dans le quartier historique des Chartrons.",
+        "capacity": 16,
+        "capacityTier": 3,
+        "rating": 4.7,
+        "reviewCount": 18,
+        "features": ["Fibre", "PMR"],
+        "features_extended": [
+            "WiFi Fibre 1 Gb/s",
+            "Projecteur HD 4000 lumens",
+            "Accès PMR",
+            "Terrasse privative 25m²",
+            "Cave à vins sur demande",
+            "Service traiteur local"
+        ],
+        "pricing": { "hour": 40, "halfDay": 145, "day": 250 },
+        "image": "les-chartrons-board-room-bureau-noir-blanc.webp",
+        "images": [
+            "les-chartrons-board-room-bureau-noir-blanc.webp",
+            "salle-reunion-chaises-orange-rose.webp",
+            "salle-reunion-chaises-oranges-flou.webp"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Île de Nantes Studio",
+        "city": "nantes",
+        "cityLabel": "Nantes",
+        "district": "Île de Nantes",
+        "address": "3 Boulevard Léon Bureau, 44200 Nantes",
+        "description": "Studio créatif et lumineux sur l'Île de Nantes, idéal pour les petites équipes agiles.",
+        "capacity": 6,
+        "capacityTier": 2,
+        "rating": 4.5,
+        "reviewCount": 63,
+        "features": ["Fibre", "4K"],
+        "features_extended": [
+            "WiFi Fibre 500 Mb/s",
+            "Écran 4K 65''",
+            "Tableau blanc",
+            "Kitchenette équipée",
+            "Lumière naturelle",
+            "Vélos à disposition"
+        ],
+        "pricing": { "hour": 28, "halfDay": 100, "day": 170 },
+        "image": "ile-de-nantes-studio-table-chaises-orange.webp",
+        "images": [
+            "salle-reunion-chaises-oranges-flou.webp",
+            "salle-reunion-chaises-orange-rose.webp",
+            "confluence-executive-suite-bureau-lumineux.webp"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Vieux-Port Panorama",
+        "city": "marseille",
+        "cityLabel": "Marseille",
+        "district": "Marseille Vieux-Port",
+        "address": "14 Quai du Port, 13002 Marseille",
+        "description": "Vue imprenable sur le Vieux-Port de Marseille pour vos réunions et séminaires professionnels.",
+        "capacity": 14,
+        "capacityTier": 3,
+        "rating": 4.4,
+        "reviewCount": 29,
+        "features": ["Fibre", "PMR"],
+        "features_extended": [
+            "WiFi Fibre 1 Gb/s",
+            "Écran OLED 80''",
+            "Accès PMR",
+            "Vue panoramique Vieux-Port",
+            "Service traiteur disponible",
+            "Climatisation"
+        ],
+        "pricing": { "hour": 38, "halfDay": 135, "day": 230 },
+        "image": "salle-reunion-chaises-oranges-flou.webp",
+        "images": [
+            "salle-reunion-chaises-oranges-flou.webp",
+            "atelier-republique-salle-reunion-ecrans.webp",
+            "les-chartrons-board-room-bureau-noir-blanc.webp"
+        ]
+    }
+]

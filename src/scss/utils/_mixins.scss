@@ -20,7 +20,7 @@
 }
 
 
-@mixin container ($padding-top: $container-vertical-padding, $padding-bottom: $container-vertical-padding, $padding-right: $container-horizontal-padding, $padding-left: $container-horizontal-padding, $padding-left-small: $container-padding-small, $padding-right-small: $container-padding-small, $max-width: $container-max-size) {
+@mixin container ($padding-top: $container-vertical-padding, $padding-bottom: $container-vertical-padding, $padding-right: $container-horizontal-padding, $padding-left: $container-horizontal-padding, $padding-left-small: $container-padding-small, $padding-right-small: $container-padding-small, $padding-top-small: $container-padding-small, $padding-bottom-small: $container-padding-small, $max-width: $container-max-size) {
 ///
 /// mixin container-inner() pour les containers et inners
 /// 
@@ -32,6 +32,9 @@
 ///     padding-left (container-horizontal-padding par défaut)
 ///     padding-right (container-horizontal-padding par défaut)
 ///     padding-left-small (container-padding-small par défaut)
+///     padding-right-small (container-padding-small par défaut)
+///     padding-top-small (container-padding-small par défaut)
+///     padding-bottom-small (container-padding-small par défaut)
 ///     max-width: (container-max-size par défaut)
 /// 
 /// Examples d'utilisation:
@@ -58,6 +61,8 @@
     @media (min-width: 640px) {
         padding-left: $padding-left-small;
         padding-right: $padding-right-small;
+        padding-top: $padding-top-small;
+        padding-bottom: $padding-bottom-small;
     }
 }
 @mixin flex-start {

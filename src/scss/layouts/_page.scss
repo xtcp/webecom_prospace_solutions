@@ -54,7 +54,7 @@
     }
     &-content {
         position: relative;
-        @include container(5rem, 5rem, 1rem, 1rem, 7rem, 1.5rem);
+        @include container(5rem, 5rem, $padding-top-small: 7rem, $padding-bottom-small: 7rem);
         &-center {
             padding: 0 1rem;
             text-align: center;

@@ -22,8 +22,8 @@
         <!-- Apple Touch Icon for iOS (modern devices) -->
         <link rel="apple-touch-icon" sizes="180x180" href="/public/assets/icon/apple-touch-icon.png">
         <!-- Android / Chrome PWA icons -->
-        <link rel="icon" type="image/png" sizes="192x192" href="/public/assets/web-app-manifest-192x192.png">
-        <link rel="icon" type="image/png" sizes="512x512" href="/public/assets/web-app-manifest-512x512.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/public/assets/icon/web-app-manifest-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="/public/assets/icon/web-app-manifest-512x512.png">
         <!-- Safari pinned tab (macOS) -->
         <link rel="mask-icon" href="/public/assets/icon/favicon.svg" color="#5bbad5">
         <!-- Manifest for Progressive Web App -->
@@ -35,11 +35,7 @@
         <header id="header"></header>
         <!-- ###### MAIN ###### -->
         <main>
-            <nav class="breadcrumb">
-                <ul>
-                    <li></li>
-                </ul>
-            </nav>
+
             <section class="hero hero-center" aria-labelledby="hero-title">
                 <div class="hero-background-gradiant"></div>
                 <div class="hero-content hero-content-center">
@@ -60,55 +56,63 @@
                                 <h2 id="contact-form-title" class="title-box-secondary">Formulaire de contact</h2>
                                 <span class="text-info text-info-small">* Champs obligatoires</span>
                             </div>
-                            <form action="" class="contact-form">
+                            <form action="" class="contact-form" id="contact-form" novalidate>
                                 <div class="contact-form-row">
                                     <div>
                                         <label for="name">Nom complet *</label>
-                                        <input id="name" type="text" value="" placeholder="Marie Dupont">
+                                        <input name="name" id="name" type="text" value="" placeholder="Marie Dupont" aria-describedby="name-error">
+                                        <p id="name-error" class="form-field-error" role="alert" hidden></p>
                                     </div>
                                     <div>
                                         <label for="email">Email professionnel *</label>
-                                        <input id="email" type="text" value="" placeholder="m.dupont@entreprise.fr">
+                                        <input name="email" id="email" type="text" value="" placeholder="m.dupont@entreprise.fr" aria-describedby="email-error">
+                                        <p id="email-error" class="form-field-error" role="alert" hidden></p>
                                     </div>
                                 </div>
                                 <div class="contact-form-row">
                                     <div>
-                                        <label for="name">Entreprise *</label>
-                                        <input id="name" type="text" value="" placeholder="Acme SAS">
+                                        <label for="company">Entreprise *</label>
+                                        <input name="company" id="company" type="text" value="" placeholder="Acme SAS" aria-describedby="company-error">
+                                        <p id="company-error" class="form-field-error" role="alert" hidden></p>
                                     </div>
                                     <div>
-                                        <label for="email">Téléphone</label>
-                                        <input id="email" type="text" value="" placeholder="+33 6 12 34 56 78">
+                                        <label for="phone">Téléphone</label>
+                                        <input name="phone" id="phone" type="text" value="" placeholder="+33 6 12 34 56 78">
                                     </div>
                                 </div>
                                 <div>
                                     <label for="subject">Sujet</label>
-                                    <select name="subject" id="subject">
+                                    <select name="subject" id="subject" aria-describedby="subject-error">
                                         <option value="">Sélectionnez un sujet…</option>
-                                        <option value="">Demande d'information</option>
-                                        <option value="">Demande de devis</option>
-                                        <option value="">Réservation</option>
-                                        <option value="">Partenariat</option>
-                                        <option value="">Réclamation</option>
-                                        <option value="">Autre</option>
+                                        <option value="information">Demande d'information</option>
+                                        <option value="devis">Demande de devis</option>
+                                        <option value="reservation">Réservation</option>
+                                        <option value="partenariat">Partenariat</option>
+                                        <option value="reclamation">Réclamation</option>
+                                        <option value="autre">Autre</option>
                                     </select>
+                                    <p id="subject-error" class="form-field-error" role="alert" hidden></p>
                                 </div>
                                 <div>
                                     <label for="message">Message *</label>
-                                    <textarea name="message" id="message" placeholder="Décrivez votre projet ou votre question…" rows="6"></textarea>
+                                    <textarea name="message" id="message" placeholder="Décrivez votre projet ou votre question…" rows="6" aria-describedby="message-error"></textarea>
+                                    <p id="message-error" class="form-field-error" role="alert" hidden></p>
                                 </div>
                                 <div>
                                     <label class="checkbox-label" for="politique">
                                         <div>
-                                            <input id="politique" name="politique" type="checkbox">
+                                            <input id="politique" name="politique" type="checkbox" aria-describedby="politique-error">
                                         </div>
                                         <span>J'accepte que mes données personnelles soient traitées conformément à la <a href="#" class="text-link text-link-secondary">politique de confidentialité</a> de ProSpace Solutions. *</span>
                                     </label>
+                                    <p id="politique-error" class="form-field-error" role="alert" hidden></p>
                                 </div>
+                                <input name="space" id="space" type="hidden" value="">
                                 <button type="submit" class="box-btn">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
                                     Envoyer le message
                                 </button>
+                                <div id="contact-form-confirmation" class="form-confirmation" role="status" aria-live="polite" hidden></div>
                             </form>
                         </div>
                     </div>
@@ -208,61 +212,24 @@
                         <h2>Des experts à votre service</h2>
                         <p>Une équipe de professionnels passionnés, disponibles pour vous accompagner dans tous vos projets d'espaces de travail.</p>
                     </div>
-                    <div class="carousel">
+                    <div class="carousel" id="carousel" tabindex="0" aria-roledescription="carrousel" aria-label="Membres de l'équipe">
                         <div class="carousel-inner">
-                            <div class="carousel-grid">
-                                <div class="carousel-card">
-                                    <div class="carousel-card-image">
-                                        <img src="/public/assets/images/team/alexandre-moreau-ceo-co-fondateur.webp" alt="Une photo de profil de Alexandre Moreau"  loading="lazy">
-                                        <div class="carousel-card-image-hover-gradiant"></div>
-                                    </div>
-                                    <p>Alexandre Moreau</p>
-                                    <p>CEO & Co-fondateur</p>
-                                </div>
-                                <div class="carousel-card">
-                                    <div class="carousel-card-image">
-                                        <img src="/public/assets/images/team/sophie-leclerc-directrice-commerciale.webp" alt="Une photo de profil de Alexandre Moreau"  loading="lazy">
-                                        <div class="carousel-card-image-hover-gradiant"></div>
-                                    </div>
-                                    <p>Sophie Leclerc</p>
-                                    <p>Directrice Commerciale</p>
-                                </div>
-                                <div class="carousel-card">
-                                    <div class="carousel-card-image">
-                                        <img src="/public/assets/images/team/thomas-bergeron-responsable-partenariats.webp" alt="Une photo de profil de Alexandre Moreau"  loading="lazy">
-                                        <div class="carousel-card-image-hover-gradiant"></div>
-                                    </div>
-                                    <p>Thomas Bergeron</p>
-                                    <p>Responsable Partenariats</p>
-                                </div>
-                                <div class="carousel-card">
-                                    <div class="carousel-card-image">
-                                        <img src="/public/assets/images/team/marine-dubois-chargee-clientele.webp" alt="Une photo de profil de Alexandre Moreau"  loading="lazy">
-                                        <div class="carousel-card-image-hover-gradiant"></div>
-                                    </div>
-                                    <p>Marine Dubois</p>
-                                    <p>Chargée de Clientèle Senior</p>
-                                </div>
+                            <div class="carousel-grid" id="carousel-grid">
+                                
                                 
                             </div>
                         </div>
                         <div class="carousel-controls">
-                            <button class="btn-carousel-arrow">
+                            <button class="btn-carousel-arrow" id="carousel-arrow-prev">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m15 18-6-6 6-6"></path></svg>
                             </button>
-                            <div class="carousel-dots">
-                                <button class="btn-carousel-dot btn-carousel-dot-active"></button>
-                                <button class="btn-carousel-dot"></button>
-                                <button class="btn-carousel-dot"></button>
-                                <button class="btn-carousel-dot"></button>
-                                <button class="btn-carousel-dot"></button>
-                                <button class="btn-carousel-dot"></button>
-                                <button class="carousel-dot"></button>
+                            <div class="carousel-dots" id="carousel-dots">
                             </div>
-                            <button class="btn-carousel-arrow">
+                            <button class="btn-carousel-arrow" id="carousel-arrow-next">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"></path></svg>
                             </button>
                         </div>
+                        <p class="sr-only" role="status" aria-live="polite" id="carousel-live"></p>
                     </div>
                 </div>
             </section>
@@ -286,5 +253,6 @@
         <footer id="footer"></footer>
 
         <script src="/public/assets/js/loader.js" defer></script>
+        <script type="module" src="/public/assets/js/main.mjs"></script>
     </body>
     

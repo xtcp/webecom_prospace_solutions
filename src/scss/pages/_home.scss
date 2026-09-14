@@ -77,6 +77,12 @@
 }
 .spaces {
     @include container;
+    h2 {
+        font-size: map.get($font-size, 'heading-small');
+        font-weight: 600;
+        color: $background-color-secondary;
+        margin-bottom: 1.5rem;   
+    }
 }
 .spaces-card-container {
     display: grid;

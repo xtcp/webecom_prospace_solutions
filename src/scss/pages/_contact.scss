@@ -265,6 +265,30 @@
         color: $text-extra;
         font-weight: 500;
     }
+    &-mail {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: $secondary-color;
+        svg: {
+            fill: $secondary-color;
+        }
+    }
+}
+/// Necessaire pour afficher dans la page pour que le <p> avec aria-live="polite" et role="status"
+///  soit fonctionnel sur les lecteurs d'ecran (espace visible)
+/// Explication: Les utilisateurs avec vision ne voit rien, les utilisateurs malvoyants ecoute l'info avec les lecteurs d'ecran
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
 .location {
     @include container(0, 4rem);
