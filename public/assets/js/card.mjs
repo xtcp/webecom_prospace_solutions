@@ -24,7 +24,7 @@ export async function createCard(fragment, space) {
 
     const url = "/public/pages/espace.html?id="+encodeURIComponent(space.id);
     const isFavoriteCheck = isFavorite(space.id);
-
+    console.log(space.id + " is favorite: "+isFavoriteCheck);
     const card = document.createElement("article");
     card.classList = "space-card";
 
@@ -36,7 +36,7 @@ export async function createCard(fragment, space) {
     image.setAttribute("loading", "lazy");
     image.setAttribute("alt", imageData.alt);
     const imageButton = document.createElement("button");
-    imageButton.classList = "space-card-image-favorite "+ (isFavoriteCheck ? ' space-card-image-favorite-active' : '') + "toggle-favorite";
+    imageButton.classList = "space-card-image-favorite "+ (isFavoriteCheck ? "space-card-image-favorite-active" : "") + " toggle-favorite";
     const imageButtonAriaLabel = isFavoriteCheck ? `Retirer ${e(space.name)} de mes espaces` : `Ajouter ${e(space.name)} aux favoris`;
     imageButton.setAttribute("aria-label", imageButtonAriaLabel);
     imageButton.setAttribute("aria-pressed", isFavoriteCheck ? 'true' : 'false');
