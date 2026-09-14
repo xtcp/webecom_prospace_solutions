@@ -103,6 +103,7 @@ function validateAll() {
 }
 
 function bindValidation() {
+    
 // Les binds des evenement 'change' ou 'input' pour lancer les validations
 // au moment de modification des champs du formulaire
 
@@ -133,6 +134,7 @@ async function submitContactForm(payload) {
 }
 
 async function handleSubmit(event) {
+    
 // Event listener submit de formulaire, traite les données et validation au
 //  clique sur Envoyer
     event.preventDefault();
@@ -180,14 +182,14 @@ export function initContactForm() {
 
     // Evite la validation de HTML5/navigateur
     form.setAttribute('novalidate', '');
-
+    
     // Rempli l'input caché avec l'id de l'espace concernant le contact
     const params = new URLSearchParams(window.location.search);
     const spaceId = params.get('espace');
-    if (!spaceId) return;
-    const space = document.getElementById('space');
-    if (space) space.value = spaceId;
-
+    if (spaceId) {
+        const space = document.getElementById('space');
+        if (space) space.value = spaceId;
+    }
     bindValidation();
     form.addEventListener('submit', handleSubmit);
 }
