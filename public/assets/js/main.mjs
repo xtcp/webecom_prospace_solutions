@@ -1,15 +1,20 @@
 // main.mjs
 // Fichier principale ou sont chargées les modules de JavaScript
 
-import { initSpaces } from './spaces.mjs';
-import { initImages } from './images.mjs';
+// Les modeles
+import { initSpaces } from './models/spaces.mjs';
+import { initImages } from './models/images.mjs';
 
-import { initMySpaces } from './my-spaces.mjs';
-import { initSearch } from './search.mjs';
-import { initContactForm } from './form.mjs';
-import { initTeamCarousel } from './carousel.mjs';
-import { initSpace } from './space.mjs';
-import { initBreadcrumb } from './breadcrumb.mjs';
+// Les pages
+import { initMySpaces } from './pages/my-spaces.mjs';
+import { initIndex } from './pages/index.mjs';
+import { initSpace } from './pages/space.mjs';
+
+// Les composants
+import { initContactForm } from './components/form.mjs';
+import { initTeamCarousel } from './components/carousel.mjs';
+import { initBreadcrumb } from './components/breadcrumb.mjs';
+import { initNavigation } from './components/navigation.mjs';
 
 // Mode deboggage pour afficher les roues de chargement, desactiver en mode production
 window.DEBUG = true;
@@ -29,13 +34,16 @@ async function init() {
     initMySpaces();
 
     // Recherche dynamique : uniquement si le conteneur de résultats existe (index.html).
-    await initSearch();
+    await initIndex();
 
     // Fiche espace détaillée : uniquement sur espace.html.
     await initSpace();
 
     // Formulaire de contact : uniquement sur contact.html.
     initContactForm();
+
+    // Gestion de navigation de header.html
+    initNavigation();
 
     // Carrousel de l'équipe : uniquement sur contact.html.
     await initTeamCarousel();
