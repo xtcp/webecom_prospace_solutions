@@ -30,7 +30,7 @@ footer {
     &-intro  {
         font-size: map.get($font-size, 'extra-small');
         line-height: 1.625;
-        color: $tertiary-color;
+        color: $info-text-tertiary;
         max-width: 200px;
     }
     &-contact {
@@ -67,7 +67,7 @@ footer {
         gap: 0.5rem;
         font-size: map.get($font-size, 'extra-small');
         line-height: 1rem;
-        color: $info-text-primary;
+        color: $info-text-tertiary;
         
         @media (min-width: 640px) {
             flex-direction: row;

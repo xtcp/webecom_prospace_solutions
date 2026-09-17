@@ -943,7 +943,7 @@ footer {
 .footer-intro {
   font-size: 0.75rem;
   line-height: 1.625;
-  color: #4e5a69;
+  color: #b8c8dd;
   max-width: 200px;
 }
 .footer-contact {
@@ -990,7 +990,7 @@ footer {
   gap: 0.5rem;
   font-size: 0.75rem;
   line-height: 1rem;
-  color: #404955;
+  color: #b8c8dd;
 }
 @media (min-width: 640px) {
   .footer-bottom {
