@@ -87,3 +87,17 @@ header {
         background-color: $hover-shadow;
     }
 }
+.spaces-text {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .spaces-text {
+        font-size: 0;
+    }
+
+    .spaces-text::after {
+        content: "Espaces";
+        font-size: 16px;
+    }
+}

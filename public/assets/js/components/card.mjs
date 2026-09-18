@@ -91,7 +91,7 @@ export async function createCard(fragment, space) {
     const price = document.createElement("div");
     price.classList = "space-card-price";
     const priceText = document.createElement("span");
-    priceText.textContent = space.pricing.hour;
+    priceText.textContent = space.pricing.hour+"€";
     const priceTextUnit = document.createElement("span");
     priceTextUnit.textContent = "/heure";
     price.append(priceText, priceTextUnit);

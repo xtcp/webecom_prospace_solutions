@@ -899,6 +899,19 @@ header {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.spaces-text {
+  display: inline;
+}
+
+@media (max-width: 768px) {
+  .spaces-text {
+    font-size: 0;
+  }
+  .spaces-text::after {
+    content: "Espaces";
+    font-size: 16px;
+  }
+}
 footer {
   background-color: #0F172A;
 }
@@ -946,6 +959,11 @@ footer {
   color: #b8c8dd;
   max-width: 200px;
 }
+@media (max-width: 640px) {
+  .footer-intro {
+    font-size: 1rem;
+  }
+}
 .footer-contact {
   display: flex;
   flex-direction: row;
@@ -956,6 +974,11 @@ footer {
   line-height: 1rem;
   color: #38BDF8;
   gap: 0.375rem;
+}
+@media (max-width: 640px) {
+  .footer-contact {
+    font-size: 1.25rem;
+  }
 }
 .footer-contact:hover {
   color: #FFF;
@@ -997,6 +1020,11 @@ footer {
     flex-direction: row;
   }
 }
+@media (max-width: 640px) {
+  .footer-bottom {
+    font-size: 1rem;
+  }
+}
 
 .footer-nav {
   line-height: 1rem;
@@ -1019,6 +1047,11 @@ footer {
 }
 .footer-nav-link:hover {
   color: #38BDF8;
+}
+@media (max-width: 640px) {
+  .footer-nav-link {
+    font-size: 1.25rem;
+  }
 }
 
 .container {
@@ -1633,7 +1666,7 @@ footer {
   margin-top: 0.125rem;
 }
 .contact-info-details-line div > p:first-of-type {
-  color: #2e333a;
+  color: #bbc6d4;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;

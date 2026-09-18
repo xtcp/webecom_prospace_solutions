@@ -97,7 +97,8 @@
                 margin-top: 0.125rem;
             }
             div > p:first-of-type {
-                color: $info-text-secondary;
+                color: $info-text-reverse;
+
                 font-size: map.get($font-size, 'extra-small');
                 font-weight: 600;
                 text-transform: uppercase;

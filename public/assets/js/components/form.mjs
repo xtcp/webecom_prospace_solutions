@@ -20,6 +20,12 @@ const VALIDATORS = {
         if (!pattern.test(value.trim())) return "Merci d'indiquer une adresse e-mail valide.";
         return '';
     },
+    phone: (value) => {
+        if (!value.trim()) return "Merci d'indiquer un numéro de telephone valide.";
+        const pattern = /^(?:(?:\+33|0)[1-9])(?:[\s.-]?\d{2}){4}$/;
+        if (!pattern.test(value.trim())) return "Merci d'indiquer un numéro de telephone valide.";
+        return '';
+    },
     company: (value) => {
         if (!value.trim()) return "Merci d'indiquer le nom de votre entreprise.";
         return '';
